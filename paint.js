@@ -6,8 +6,8 @@ var posX;
 var posY;
 
 function setup() {
-	createCanvas(999, 500);
-  background(50, 150, 200,);
+createCanvas(999, 500);
+background(50, 150, 200,);
   
   red = 255;
   green = 0;
