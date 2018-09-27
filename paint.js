@@ -21,11 +21,8 @@ background(50, 150, 200,);
 function draw() {
  
   fill(red, green, blue, 90);
-
-  
   rect(posX, posY, 10, 10, 25);
-  
-}
+  }
 
 function keyPressed() {
   if (red === 255) {
