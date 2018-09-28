@@ -25,35 +25,26 @@ function draw() {
   fill(red, green, blue, 90);
 	rect(posX, posY, 50, 50, 25);
   
-  button = createButton("Eraser");
-	button.position(10, 7);
-  button.mousePressed(Eraser);
-  
+  textSize(32);
+	text('ALT = eraser. Ctrl = random color.', 0, 26);
   
 }
 
 function keyPressed(){
   if (keyCode === ALT){
-    red = 50;
-    green = 150
-    blue = 200;
+    red = 185;
+  	green = 255;
+  	blue = 255;
+  	posX = -111;
+  	posY = 0;
   }
-  else {
+  else if (keyCode === CONTROL){
     red = random(255);
     green = random(255);
     blue = random(255);
     posX = -111;
   	posY = 0;
   }
-   
-}
-
-function Eraser(){
-  red = 185;
-  green = 255;
-  blue = 255;
-  posX = -111;
-  posY = 0;
 }
 
 
