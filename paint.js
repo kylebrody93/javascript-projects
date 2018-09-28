@@ -5,9 +5,7 @@ var blue;
 //mouse contorl variables
 var posX;
 var posY;
-//brush size variables
-var sizeW;
-var sizeH;
+
 
 function setup() {
   createCanvas(999, 500);
@@ -17,39 +15,46 @@ function setup() {
   green = 150;
   blue = 200;
 //brush starts off screen
-  posX = -11;
+  posX = -111;
   posY = 0;
-//starting cursor size
-  sizeW = 10;
-  sizeH = 10;
 }
 
 
 function draw() {
-
+	noStroke()
   fill(red, green, blue, 90);
-
-  rect(posX, posY, sizeW, sizeH, 25);
-
+	rect(posX, posY, 50, 50, 25);
+  
+  button = createButton("Eraser");
+	button.position(10, 7);
+  button.mousePressed(Eraser);
+  
+  
 }
 
-function keyPressed() {
-  //user picks between 2 brush sizes and between random rgb colors
-  if (keyCode === ALT) {
-    sizeW = 20;
-    sizeH = 20;
-  } else if (keyCode === CONTROL) {
-    sizeW = 10;
-    sizeH = 10;
-  } 
-   	else {
+function keyPressed(){
+  if (keyCode === ALT){
+    red = 50;
+    green = 150
+    blue = 200;
+  }
+  else {
     red = random(255);
     green = random(255);
     blue = random(255);
+    posX = -111;
+  	posY = 0;
   }
-
+   
 }
 
+function Eraser(){
+  red = 185;
+  green = 255;
+  blue = 255;
+  posX = -111;
+  posY = 0;
+}
 
 
 function mouseClicked() {
