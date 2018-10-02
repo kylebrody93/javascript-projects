@@ -33,9 +33,9 @@ function draw() {
 	text('RIGHT ARROW to move forward.', 10, 260);
   
   //computer will race until 10px after the finish line.
-	if (computerX < 710) {
-		computerX = computerX + 1;
-		}
+  if (computerX < 710) {
+	  computerX = computerX + 1;
+	  }
   
   if (playerX > 700 && playerX > computerX) {
     textSize(32);
@@ -45,6 +45,7 @@ function draw() {
     textSize(32);
 		text('You LOSE.', 10, 30);
     //this keeps player from crossing finish line
+    while (playerX > -43)
     playerX = playerX - 20;
   }
 }
@@ -59,3 +60,4 @@ function keyPressed(){
     playerX = playerX + 10;
   }
 }
+
